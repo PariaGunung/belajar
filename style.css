@@ -1,0 +1,127 @@
+/* Reset CSS untuk menghilangkan margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk header dan navbar */
+header {
+    background-color: #3ecbc6; /* Warna latar belakang navbar */
+    padding: 10px; /* Ruang di sekitar konten header */
+}
+
+.navbar {
+    display: flex; /* Mengatur elemen-elemen dalam baris */
+    align-items: center; /* Menyusun elemen secara vertikal tengah */
+    justify-content: space-between; /* Mengatur elemen secara horizontal di antara */
+}
+.centered-content {
+    display: flex;
+    justify-content: center; /* Mengatur item di tengah secara horizontal */
+    align-items: center; /* Mengatur item di tengah secara vertikal */
+    height: 100vh; /* Mengisi tinggi layar penuh */
+    margin: 0; /* Menghilangkan margin default */
+
+}
+
+.logo img {
+    width: 90px; /* Ukuran logo */
+    height: 60px;
+}
+
+/* Gaya untuk daftar navigasi */
+.nav-links {
+    list-style: none; /* Menghilangkan tanda bulat daftar */
+    display: flex; /* Mengatur elemen-elemen dalam baris */
+}
+
+.nav-links li {
+    margin-right: 20px; /* Ruang antara tautan navigasi */
+}
+
+.nav-links a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: #fff; /* Warna teks tautan */
+    font-weight: bold; /* Ketebalan teks tautan */
+}
+/* Gaya untuk elemen-elemen yang ingin di tengah */
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    margin: 5px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #1cd4c8 0%, #89d411 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #1cd4c8 0%, #89d411 100% );
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover::before {
+    height: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: none;
+  }
+  
+  .card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+  }
+
